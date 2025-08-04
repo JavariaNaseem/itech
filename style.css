@@ -925,10 +925,40 @@ section.our-services-section {
     text-align: center;
   }
 }
+@media (max-width: 768px) {  /* Adjust for mobile breakpoint */
+  .hero-carousel img {
+    max-width: 60%;   /* Reduce image width */
+    height: auto;     /* Maintain aspect ratio */
+  }
+
+  .carousel-content h1 {
+    font-size: 1.5rem; /* Optional: Reduce heading size */
+  }
+
+  .carousel-content p {
+    font-size: 1rem;   /* Optional: Reduce paragraph size */
+  }
+}
+@media (max-width: 768px) {  /* Adjust for mobile breakpoint */
+  .hero-carousel img {
+    max-width: 90%;   /* Reduce image width */
+    height: auto;     /* Maintain aspect ratio */
+  }
+
+  .carousel-content h1 {
+    font-size: 1.5rem; /* Optional: Reduce heading size */
+  }
+
+  .carousel-content p {
+    font-size: 1rem;   /* Optional: Reduce paragraph size */
+  }
+}
+
 
 
 
 
 
    
+
     
