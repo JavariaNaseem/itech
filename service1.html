@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Development & ASO | iTech Search</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9fafc;
+  color: #222;
+}
+h1, h2 { color: #0d3b66; font-weight: 700; }
+h3 { color: #145ea8; }
+
+/* Buttons */
+.btn-primary, .btn-glow {
+  display: inline-block;
+  background: linear-gradient(90deg, #0d3b66, #2563eb);
+  color: white;
+  padding: 14px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 5%;
+
+}
+.btn-primary {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.btn-glow {
+  background: linear-gradient(90deg, #16cbf9, #2243ff);
+  box-shadow: 0 4px 20px rgba(35, 49, 248, 0.5);
+}
+.btn-primary:hover, .btn-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(circle at 20% 20%, #0d3b66, #145ea8);
+  color: white;
+  padding: 120px 10%;
+  position: relative;
+}
+.hero-content { max-width: 500px; }
+.hero-mockup img {
+  width: 550px;
+  height: 50vh;
+  border-radius: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-12px)} }
+
+/* Features */
+.features { text-align: center; padding: 80px 10%; }
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-8px); }
+.card i { font-size: 2rem; color: #0d3b66; margin-bottom: 10px; }
+
+/* Split Sections */
+.split-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+}
+.split-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.reverse { flex-direction: row-reverse; }
+ul li { margin: 8px 0; }
+
+/* ASO Steps */
+.aso-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.step {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.step span {
+  background: #0d3b66;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Timeline */
+.process { text-align: center; padding: 80px 10%; }
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.bubble {
+  background: white;
+  border: 2px solid #0d3b66;
+  padding: 20px 25px;
+  border-radius: 30px;
+  min-width: 120px;
+  margin: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #0d3b66, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #f97316;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.floating-btn:hover { transform: scale(1.05); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero, .split-section { flex-direction: column; text-align: center; }
+  .hero-mockup img { width: 100%; }
+}
+
+  </style>
+</head>
+<body>
+   <!--nav bar-->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+           <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+     <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+<!--nav bar-->
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 style="color: white;margin-bottom: 5%;font-size: 3rem;">App Store Optimization</h1>
+      <h1 style="color: white;">Build. Launch. Rank.</h1>
+      <p style="font-size: 1.5rem;">We design cutting-edge mobile apps and craft winning ASO strategies to skyrocket downloads and user engagement.</p>
+      <a href="contact.html" class="btn-primary">Get a Free Strategy Session</a>
+    </div>
+    <div class="hero-mockup">
+      <img src="Images/app.jpg" alt="App Development Mockup">
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="features">
+    <h2>Why iTech Search?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <i class="fas fa-rocket"></i>
+        <h3>High Growth</h3>
+        <p>Proven techniques to push your app to top search results and increase downloads.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Next-Gen Apps</h3>
+        <p>From sleek design to flawless functionality, we deliver top-tier mobile experiences.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Data-Driven</h3>
+        <p>Strategies backed by analytics for sustainable, scalable growth.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Secure Solutions</h3>
+        <p>We build secure, reliable apps that users and businesses trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP DEVELOPMENT -->
+  <section class="split-section">
+    <div class="split-text">
+      <h2>Custom App Development</h2>
+      <p>We transform your ideas into high-performance mobile applications<br> with intuitive designs and seamless functionality.</p>
+      <ul>
+        <li><i class="fas fa-check"></i> Native & Cross-Platform Development</li>
+        <li><i class="fas fa-check"></i> Modern UI/UX Design</li>
+        <li><i class="fas fa-check"></i> API Integrations & Testing</li>
+        <li><i class="fas fa-check"></i> Scalable, Secure Architecture</li>
+      </ul>
+    </div>
+    <div class="split-image">
+      <img src="Images/app2.jpg" alt="App Development">
+    </div>
+  </section>
+
+  <!-- ASO -->
+  <section class="split-section reverse">
+    <div class="split-text">
+      <h2>App Store Optimization (ASO)</h2>
+      <p>We position your app for success with proven ASO strategies to maximize visibility and conversions.</p>
+      <div class="aso-steps">
+        <div class="step"><span>1</span> Keyword Research</div>
+        <div class="step"><span>2</span> Optimized Metadata</div>
+        <div class="step"><span>3</span> Engaging Visuals</div>
+        <div class="step"><span>4</span> Ratings & Conversion Boost</div>
+      </div>
+    </div>
+    <div class="split-image">
+      <img src="Images/app3.jpg" alt="ASO Services">
+    </div>
+  </section>
+
+ 
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <h2 style="color: white;">Ready to Dominate the App Market?</h2>
+    <p style="font-size: 1.5rem; margin-top: 3%;">Partner with iTech Search for premium development and ASO services.</p>
+    <a href="contact.html" class="btn-glow">Contact Us</a>
+  </section>
+
+  <!-- Sticky CTA -->
+  
+
+  <!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Services Section -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+       <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 P-23 Chenab Market, Susan Road, Madina Town, Faisalabad</p>
+      <p>📞 041-715100</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software House Blog Slider</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f7fc;
+    }
+
+    /* HERO SECTION */
+    .blog-hero {
+      height: 60vh;
+      background: url(Images/blog-h.jpg) center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .blog-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+      animation: slideUp 1s ease-out;
+    }
+
+    .blog-heading {
+      font-size: 3rem;
+      color: #00e0ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease;
+    }
+
+    .typing-text {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #ffffff;
+      min-height: 60px;
+      animation: fadeIn 2.5s ease;
+    }
+    /* Animations */
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .blog-heading {
+        font-size: 2rem;
+      }
+      .typing-text {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+    }
+/* slider */
+    .auto-blog-zone {
+      padding: 40px 20px;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-slide-wrapper {
+      overflow: hidden;
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .blog-slide-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .auto-blog-card {
+      min-width: 33.33%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    .blog-content-box {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .blog-content-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-content-box h3 {
+      font-size: 1.2rem;
+      margin: 15px;
+      color: #333;
+    }
+
+    .blog-content-box p {
+      margin: 0 15px 15px 15px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .blog-content-box .readmore-btn-link {
+      margin: 15px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #3672aa;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      width: fit-content;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .readmore-btn-link:hover {
+      background-color: #26527d;
+    }
+
+    .blog-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #3672aa;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 2;
+      font-size: 18px;
+      border-radius: 50%;
+    }
+
+    .blog-nav-btn:hover {
+      background: #26527d;
+    }
+
+    .blog-left-arrow {
+      left: 10px;
+    }
+
+    .blog-right-arrow {
+      right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .auto-blog-card {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!--nav bar-->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+      <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+     <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+<!--nav bar--><script>
+    // navbar
+ function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+    document.getElementById('contactBtn').classList.toggle('active');
+  }
+</script>
+
+  <!-- HERO SECTION -->
+  <section class="blog-hero">
+    <div class="blog-overlay"></div>
+    <div class="blog-hero-content">
+      <h1 class="blog-heading">Welcome to Our Blog</h1>
+      <p class="typing-text" id="typing"></p>
+    </div>
+  </section>
+
+  <!-- TYPING SCRIPT -->
+  <script>
+    const phrases = [
+      "Discover insights, tips, and trends from iTech experts.",
+      "Stay ahead with the latest tech stories and solutions.",
+      "Explore innovation, strategy, and development with us.",
+      "Your source for smart digital transformation content."
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typing');
+
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIndex];
+      let displayedText = currentPhrase.substring(0, charIndex);
+      typingElement.textContent = displayedText;
+
+      if (!isDeleting) {
+        if (charIndex < currentPhrase.length) {
+          charIndex++;
+          setTimeout(typeEffect, 70);
+        } else {
+          isDeleting = true;
+          setTimeout(typeEffect, 1500);
+        }
+      } else {
+        if (charIndex > 0) {
+          charIndex--;
+          setTimeout(typeEffect, 30);
+        } else {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(typeEffect, 400);
+        }
+      }
+    }
+    typeEffect();
+  </script>
+
+<!-- slider -->
+<section class="auto-blog-zone">
+  <div class="blog-slide-wrapper">
+    <button class="blog-nav-btn blog-left-arrow">&#10094;</button>
+    <button class="blog-nav-btn blog-right-arrow">&#10095;</button>
+
+    <div class="blog-slide-track" id="blogAutoSlider">
+      <!-- 7 Software House Blog Cards -->
+      <div class="auto-blog-card">
+        <div class="blog-content-box">
+          <img src="Images/BLOG1.png" alt="Blog 1">
+          <h3>Agile vs Waterfall: Choosing the Right Approach</h3>
+          <p>Explore the pros and cons of Agile and Waterfall methodologies and learn which is best for your project.</p>
+          <a href="blog1.html" class="readmore-btn-link">Read More</a>
+        </div>
+      </div>
+
+      <div class="auto-blog-card">
+        <div class="blog-content-box">
+          <img src="Images/blog2.png" alt="Blog 2">
+          <h3>Why UI/UX Design Is Crucial for Web Apps</h3>
+          <p>Learn how intuitive design can improve user engagement and satisfaction in software applications.</p>
+          <a href="blog2.html" class="readmore-btn-link">Read More</a>
+        </div>
+      </div>
+
+      <div class="auto-blog-card">
+        <div class="blog-content-box">
+          <img src="Images/blog3.png" alt="Blog 3">
+          <h3>Scaling Your Startup with Custom Software</h3>
+          <p>Discover how bespoke software solutions can help startups grow faster and manage operations efficiently.</p>
+          <a href="blog3.html" class="readmore-btn-link">Read More</a>
+        </div>
+      </div>
+
+      <div class="auto-blog-card">
+        <div class="blog-content-box">
+          <img src="Images/blog4.jpg" alt="Blog 4">
+          <h3>Benefits of Cloud Integration for Businesses</h3>
+          <p>From scalability to security, find out why integrating cloud services is a smart move for modern companies.</p>
+          <a href="blog4.html" class="readmore-btn-link">Read More</a>
+        </div>
+      </div>
+
+      <div class="auto-blog-card">
+        <div class="blog-content-box">
+          <img src="Images/blog5.jpg" alt="Blog 5">
+          <h3>Top Mobile App Development Trends in 2025</h3>
+          <p>Stay ahead of the curve with the latest innovations in mobile app development and design.</p>
+          <a href="blog5.html" class="readmore-btn-link">Read More</a>
+        </div>
+      </div>
+
+      <div class="auto-blog-card">
+        <div class="blog-content-box">
+          <img src="Images/blog6.jpg" alt="Blog 6">
+          <h3>Cybersecurity Best Practices for Developers</h3>
+          <p>Protect your software and users by following key principles of secure coding and app development.</p>
+          <a href="blog6.html" class="readmore-btn-link">Read More</a>
+        </div>
+      </div>
+
+      <div class="auto-blog-card">
+        <div class="blog-content-box">
+          <img src="Images/blog7.jpg" alt="Blog 7">
+          <h3>Integrating AI in Business Software</h3>
+          <p>See how AI and machine learning are transforming traditional software into smart business tools.</p>
+          <a href="blog7.html" class="readmore-btn-link">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const blogTrack = document.getElementById("blogAutoSlider");
+  const blogCards = document.querySelectorAll(".auto-blog-card");
+  const blogTotal = blogCards.length;
+  const blogView = 3;
+  let blogIndex = blogTotal;
+  const blogWidth = blogTrack.offsetWidth / blogView;
+
+  // Clone for infinite scroll
+  for (let i = blogTotal - 1; i >= blogTotal - blogView; i--) {
+    const clone = blogCards[i].cloneNode(true);
+    blogTrack.insertBefore(clone, blogTrack.firstChild);
+  }
+
+  for (let i = 0; i < blogView; i++) {
+    const clone = blogCards[i].cloneNode(true);
+    blogTrack.appendChild(clone);
+  }
+
+  blogTrack.style.transform = `translateX(-${blogIndex * blogWidth}px)`;
+
+  function shiftBlogSlide(dir) {
+    blogIndex += dir;
+    blogTrack.style.transition = "transform 0.6s ease-in-out";
+    blogTrack.style.transform = `translateX(-${blogIndex * blogWidth}px)`;
+
+    blogTrack.addEventListener("transitionend", () => {
+      if (blogIndex <= 0) {
+        blogTrack.style.transition = "none";
+        blogIndex = blogTotal;
+        blogTrack.style.transform = `translateX(-${blogIndex * blogWidth}px)`;
+      } else if (blogIndex >= blogTotal + blogView) {
+        blogTrack.style.transition = "none";
+        blogIndex = blogTotal - blogView;
+        blogTrack.style.transform = `translateX(-${blogIndex * blogWidth}px)`;
+      }
+    }, { once: true });
+  }
+
+  document.querySelector(".blog-right-arrow").addEventListener("click", () => shiftBlogSlide(1));
+  document.querySelector(".blog-left-arrow").addEventListener("click", () => shiftBlogSlide(-1));
+
+  setInterval(() => {
+    shiftBlogSlide(1);
+  }, 2500);
+</script>
+
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Services Section -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+    <!-- Quick Links Section -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍Khyaban Colony,Ali Road near Ali Masjid, Madina Town, Faisalabad</p>
+      <p>📞 041-2432639</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

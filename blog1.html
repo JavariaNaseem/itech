@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agile vs Waterfall | Software House Blog</title>
+  <meta name="description" content="Explore the pros and cons of Agile and Waterfall methodologies and learn which is best for your project.">
+  <meta name="keywords" content="Agile, Waterfall, Software Development, Project Management, Software Methodology">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      color: #333;
+    }
+    .blog-container {
+      max-width: 900px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      border-radius: 10px;
+    }
+    .blog-container img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .blog-container h1 {
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+    .blog-container h2 {
+      color: #005599;
+      margin-top: 30px;
+    }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 10px 18px;
+      background: #003366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+    .back-button:hover {
+      background: #005599;
+    }
+    /* Contact section */
+    .contact-section {
+      background: #003366;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 50px;
+      border-radius: 8px;
+    }
+    .contact-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    .contact-section p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #00bfff;
+      color: #003366;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+    .contact-button:hover {
+      background-color: #00a2d6;
+    }
+    @media (max-width: 600px) {
+      .blog-container {
+        margin: 20px;
+        padding: 25px;
+      }
+      .blog-container h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!--nav bar-->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+           <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+      </div>
+    </div>
+   <a href="#" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+  <div class="blog-container">
+    <!-- Back to Blog Button at Top -->
+    <a href="blog.html" class="back-button">← Back to Blog</a>
+    <img src="Images/BLOG1.png" alt="Agile vs Waterfall" loading="lazy">
+    <h1>Agile vs Waterfall: Choosing the Right Approach</h1>
+    <p>
+      When developing software, choosing the right development methodology is crucial for your project's success. Two of the most common approaches are Agile and Waterfall.
+    </p>
+    <h2>What is the Waterfall Model?</h2>
+    <p>
+      The Waterfall model is a linear and sequential approach. Each phase (requirements, design, implementation, testing, deployment, and maintenance) is completed before the next begins. It's best suited for projects with well-defined requirements that are unlikely to change.
+    </p>
+    <h2>What is the Agile Model?</h2>
+    <p>
+      Agile is an iterative and flexible methodology where development is broken into smaller cycles called sprints. Each sprint includes planning, development, testing, and review. Agile promotes collaboration, quick feedback, and continuous improvement.
+    </p>
+    <h2>Pros & Cons</h2>
+    <ul>
+      <li><strong>Waterfall Pros:</strong> Simple, structured, easy to manage.</li>
+      <li><strong>Waterfall Cons:</strong> Rigid, hard to accommodate changes mid-project.</li>
+      <li><strong>Agile Pros:</strong> Adaptable, frequent delivery, stakeholder involvement.</li>
+      <li><strong>Agile Cons:</strong> Requires experienced teams, less predictable timelines.</li>
+    </ul>
+    <h2>Which One Should You Choose?</h2>
+    <p>
+      If your project has fixed requirements and a defined scope, Waterfall might be suitable. For dynamic projects where user feedback and rapid changes are needed, Agile is the better choice.
+    </p>
+  </div>
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <h2>Have a Project in Mind?</h2>
+    <p>Contact our expert software team today to discuss your idea or get a free consultation.</p>
+    <a href="contact.html" class="contact-button">Contact Us</a>
+  </div>
+  
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Services Section -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+    <!-- Quick Links Section -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 P-23 Chenab Market, Susan Road, Madina Town, Faisalabad</p>
+      <p>📞 041-715100</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About iTech Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .hero {
+      height: 40vh;
+      background: url(Images/about.jpg) center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #00e0ff;
+    }
+
+    .typing-text {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #fff;
+      min-height: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .typing-text {
+        font-size: 1rem;
+      }
+    }
+    /* about us */
+     .itech-about-section {
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #ffffff 60%, #bfd6f8 40%);
+    overflow: hidden;
+  }
+
+  .itech-about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* Text */
+  .itech-about-text {
+    flex: 1;
+    min-width: 320px;
+    animation: itechFloatLeft 4s ease-in-out infinite;
+  }
+
+  .itech-about-text h2 {
+    font-size: 2.8rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    position: relative;
+    animation: itechTextPulse 3s ease-in-out infinite;
+  }
+
+  .itech-about-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #3399ff;
+    border-radius: 2px;
+  }
+
+  .itech-about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 20px;
+    animation: itechTextFade 5s ease-in-out infinite;
+  }
+
+  /* Image */
+  .itech-about-image {
+    flex: 1;
+    min-width: 320px;
+    animation: itechFloatRight 4s ease-in-out infinite;
+  }
+
+  .itech-about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    animation: itechImagePulse 6s ease-in-out infinite;
+  }
+
+  .itech-about-image img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Animations */
+  @keyframes itechFloatLeft {
+    0%, 100% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+  }
+
+  @keyframes itechFloatRight {
+    0%, 100% { transform: translateX(10px); }
+    50% { transform: translateX(-10px); }
+  }
+
+  @keyframes itechTextPulse {
+    0%, 100% { color: #1e3a8a; }
+    50% { color: #3399ff; }
+  }
+
+  @keyframes itechTextFade {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes itechImagePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .itech-about-container {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    .itech-about-text h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  /* card */
+  .info-section {
+  background-color: white;
+  padding: 80px 20px;
+  overflow-x: hidden; /* prevent horizontal scroll during animation */
+}
+
+  .info-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .info-card {
+    background: white;
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* increased shadow */
+    text-align: center;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: all 1.2s ease;
+  }
+
+  .info-icon {
+    font-size: 40px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+  }
+
+  .info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+  }
+
+  .info-card p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  /* Hover Effects */
+  .info-card:hover {
+     transform: translateY(-5px) rotateZ(-10deg); /* slight upward + rotate */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);   /* deeper shadow */
+  }
+
+  .info-card:hover .info-icon {
+    transform: translateY(-5px) rotateZ(-10deg); /* icon motion */
+  }
+  .info-card.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .info-card:nth-child(1).visible {
+    transition-delay: 0.2s;
+  }
+  .info-card:nth-child(2).visible {
+    transition-delay: 0.5s;
+  }
+  .info-card:nth-child(3).visible {
+    transition-delay: 0.8s;
+  }
+  @media (max-width: 992px) {
+    .info-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-card {
+      width: 100%;
+    }
+  }
+
+  /* history */
+     .itech-history-section {
+    background: #3672aa;
+    padding: 40px 20px;
+  }
+  .itech-history-heading {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+  }
+  .itech-history-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+  .itech-history-box {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .itech-history-box:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  }
+  .itech-icon {
+    font-size: 2.8rem;
+    color: #3672aa;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+  }
+  .itech-history-box:hover .itech-icon {
+    transform: translateY(-4px) rotate(-5deg);
+  }
+  .itech-counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+  }
+  .itech-label {
+    font-size: 1.1rem;
+    color: #475569;
+  }
+  @media (max-width: 600px) {
+    .itech-history-heading {
+      font-size: 2rem;
+    }
+  }
+    .digital-future-section {
+    background-color: white;
+    padding: 80px 20px;
+    overflow-x: hidden;
+  }
+
+  .digital-future-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .digital-future-text {
+    flex: 1;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all 1.2s ease;
+  }
+
+  .digital-future-text.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .df-heading {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+
+  .df-paragraph {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .digital-future-image {
+    flex: 1;
+    text-align: center;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: all 1.2s ease;
+  }
+
+  .digital-future-image.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .digital-future-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 992px) {
+    .digital-future-container {
+      flex-direction: column;
+    }
+
+    .digital-future-text,
+    .digital-future-image {
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+  </style>
+</head>
+
+<body>
+ <!--nav bar-->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+     <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+     <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+<script>
+    // navbar
+ function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+    document.getElementById('contactBtn').classList.toggle('active');
+  }
+</script>
+    <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>About iTech Search</h1>
+      <p class="typing-text" id="typing"></p>
+    </div>
+  </section>
+
+  <script>
+  const phrases = [
+    "iTech Search is a modern tech platform focused on innovation.",
+    "We connect users with the latest in software, AI, and cloud services.",
+    "Our mission is to simplify technology for everyone.",
+    "iTech Search keeps you updated with future trends and solutions.",
+    "Your go-to place for smart, fast, and reliable tech info."
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingElement = document.getElementById('typing');
+  function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+    let displayedText = currentPhrase.substring(0, charIndex);
+    typingElement.textContent = displayedText;
+    if (!isDeleting) {
+      if (charIndex < currentPhrase.length) {
+        charIndex++;
+        setTimeout(typeEffect, 70);
+      } else {
+        // Finished typing, wait before deleting
+        isDeleting = true;
+        setTimeout(typeEffect, 1500);
+      }
+    } else {
+      if (charIndex > 0) {
+        charIndex--;
+        setTimeout(typeEffect, 30);
+      } else {
+        // Finished deleting, move to next phrase
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, 400);
+      }
+    }
+  }
+  typeEffect();
+</script>
+
+<!-- About Section -->
+<section class="itech-about-section">
+  <div class="itech-about-container">
+    <div class="itech-about-text">
+      <h2>About iTech Search</h2>
+      <p>
+        At iTech Search, we empower businesses with cutting-edge technology solutions tailored to meet the dynamic needs of today’s digital landscape. As a leading software house, we specialize in delivering innovative and scalable IT services, including custom WordPress development, web design, mobile app development, digital marketing, and more. Our mission is to help businesses grow through technology by providing seamless, high-quality, and cost-effective solutions.
+      </p>
+    </div>
+    <div class="itech-about-image">
+      <img src="Images/key.jpg" alt="About iTech Search">
+    </div>
+  </div>
+</section>
+
+<!-- Vision, Mission, Values Section -->
+<section class="info-section" id="info-section">
+  <div class="info-container">
+    <div class="info-card">
+      <div class="info-icon"><i class="fas fa-lightbulb"></i></div>
+      <h3>Our Vision</h3>
+      <p>
+        Our vision is to empower businesses through innovative IT solutions that drive growth and success. With a focus on delivering high-quality results and exceeding client expectations, we aim to be your go-to technology partner for all your digital needs.
+      </p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon"><i class="fas fa-rocket"></i></div>
+      <h3>Our Mission</h3>
+      <p>
+        To provide innovative and customized technology solutions that help businesses enhance their digital presence, optimize operations, and achieve measurable success. Our solutions are designed to help businesses scale and adapt to changing market demands, creating long-term value for our clients.
+      </p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon"><i class="fas fa-handshake"></i></div>
+      <h3>Our Values</h3>
+      <p>
+        We believe in transparent and honest communication with our clients and partners. Constantly exploring new technologies and solutions to stay ahead of the curve. Providing top-notch quality in every service we deliver. Working closely with clients to ensure their success.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Observer to trigger animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.info-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+<!-- history -->
+<section class="itech-history-section">
+  <h2 class="itech-history-heading">Our History</h2>
+  <div class="itech-history-wrapper">
+    <div class="itech-history-box">
+      <div class="itech-icon"><i class="fas fa-user"></i></div>
+      <div class="itech-counter" data-count="5">0</div>
+      <div class="itech-label">Employee</div>
+    </div>
+    <div class="itech-history-box">
+      <div class="itech-icon"><i class="fas fa-smile"></i></div>
+      <div class="itech-counter" data-count="30">0</div>
+      <div class="itech-label">Happy Clients</div>
+    </div>
+    <div class="itech-history-box">
+      <div class="itech-icon"><i class="fas fa-check-circle"></i></div>
+      <div class="itech-counter" data-count="50">0</div>
+      <div class="itech-label">Work Done</div>
+    </div>
+    <div class="itech-history-box">
+      <div class="itech-icon"><i class="fas fa-globe"></i></div>
+      <div class="itech-counter" data-count="1">0</div>
+      <div class="itech-label">Country Served</div>
+    </div>
+    <div class="itech-history-box">
+      <div class="itech-icon"><i class="fas fa-handshake"></i></div>
+      <div class="itech-counter" data-count="5">0</div>
+      <div class="itech-label">International Clients</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const itechCounters = document.querySelectorAll('.itech-counter');
+  const itechObserver = new IntersectionObserver(startItechCountUp, { threshold: 0.5 });
+
+  itechCounters.forEach(counter => {
+    itechObserver.observe(counter);
+  });
+  function startItechCountUp(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateItechCount(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+  function animateItechCount(element) {
+    const target = +element.getAttribute('data-count');
+    let current = 0;
+    const duration = 2000;
+    const step = Math.ceil(duration / target);
+
+    const counterInterval = setInterval(() => {
+      current++;
+      element.textContent = current;
+      if (current >= target) {
+        clearInterval(counterInterval);
+      }
+    }, step);
+  }
+</script>
+
+<!-- last para -->
+ <section class="digital-future-section" id="digital-future">
+  <div class="digital-future-container">
+    <div class="digital-future-text">
+      <h2 class="df-heading">Let's Build Your Digital Future Together!</h2>
+      <p class="df-paragraph">
+        At iTech Search, we believe in the power of technology to transform businesses and shape the future.
+        Whether you're a dynamic startup or a well-established enterprise, our innovative IT solutions are tailored
+        to help you streamline operations, enhance your digital presence, and accelerate sustainable growth.
+        We don’t just offer services—we become your strategic partner, working closely with you to bring your ideas
+        to life with precision and purpose. Let’s build something remarkable together. Reach out to us today and take
+        the first step toward a smarter, more connected digital future.
+      </p>
+    </div>
+    <div class="digital-future-image">
+      <img src="Images/about.jpg" alt="Digital Future Image">
+    </div>
+  </div>
+</section>
+
+<script>
+  const dfObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+  dfObserver.observe(document.querySelector('.digital-future-text'));
+  dfObserver.observe(document.querySelector('.digital-future-image'));
+</script>
+
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Services Section -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+    <!-- Quick Links Section -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+     <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍  Khyaban Colony,Ali Road near Ali Masjid, Madina Town, Faisalabad</p>
+      <p>📞 041-2432639</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

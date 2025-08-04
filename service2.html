@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artificial Intelligence | iTech Search</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #222;
+    }
+    h1, h2 { color: #0d3b66; font-weight: 700; }
+    h3 { color: #145ea8; }
+
+    .btn-primary, .btn-glow {
+      display: inline-block;
+      background: linear-gradient(90deg, #0d3b66, #2563eb);
+      color: white;
+      padding: 14px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 5%;
+    }
+    .btn-glow {
+      background: linear-gradient(90deg, #16cbf9, #2243ff);
+      box-shadow: 0 4px 20px rgba(35, 49, 248, 0.5);
+    }
+    .btn-primary:hover, .btn-glow:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    }
+    .btn-primary {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at 20% 20%, #0d3b66, #145ea8);
+      color: white;
+      padding: 120px 10%;
+      position: relative;
+    }
+    .hero-content { max-width: 500px; }
+    .hero-mockup img {
+      width: 550px;
+      height: 50vh;
+      border-radius: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-12px)} }
+
+    .features { text-align: center; padding: 80px 10%; }
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card i { font-size: 2rem; color: #0d3b66; margin-bottom: 10px; }
+
+   .split-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+}
+.split-text {
+  flex: 1;
+}
+.split-image {
+  flex: 1;
+}
+.split-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+    ul li { margin: 8px 0; }
+
+    .aso-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .step {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .step span {
+      background: #0d3b66;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #0d3b66, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+ 
+
+    @media (max-width: 768px) {
+      .hero, .split-section { flex-direction: column; text-align: center; }
+      .hero-mockup img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar (external CSS) -->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+          <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+    <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 style="margin-bottom: 5%;font-size: 3rem;color: white;">Artificial Intelligence</h1>
+    <h1 style="color: white;">Smarter Solutions. Faster Results.</h1>
+    <p style="font-size: 1.5rem;">Empowering businesses through cutting-edge AI models and intelligent automation to drive decision-making and innovation.</p>
+    <a href="contact.html" class="btn-primary">Get a Free AI Strategy</a>
+  </div>
+  <div class="hero-mockup">
+    <img src="Images/ai1.jpg" alt="AI Technology Image">
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="features">
+  <h2>Why Choose AI with iTech Search?</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <i class="fas fa-brain"></i>
+      <h3>Intelligent Insights</h3>
+      <p>Unlock deep learning and predictive analytics to drive smarter business decisions.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-cogs"></i>
+      <h3>Automation</h3>
+      <p>Automate repetitive tasks and processes to improve efficiency and reduce costs.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-robot"></i>
+      <h3>AI Solutions</h3>
+      <p>From chatbots to recommendation engines, we build AI that works for your goals.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-lock"></i>
+      <h3>Secure & Scalable</h3>
+      <p>AI systems that are robust, scalable, and compliant with data privacy standards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI SOLUTIONS -->
+<section class="split-section">
+  <div class="split-text">
+    <h2>Custom AI Development</h2>
+    <p>We develop tailored AI models that align with your business objectives using machine learning, NLP, and data science.</p>
+    <ul>
+      <li><i class="fas fa-check"></i> Machine Learning Algorithms</li>
+      <li><i class="fas fa-check"></i> Computer Vision & Image Recognition</li>
+      <li><i class="fas fa-check"></i> NLP and Chatbots</li>
+      <li><i class="fas fa-check"></i> Predictive Analytics</li>
+    </ul>
+  </div>
+  <div class="split-image">
+    <img src="Images/ai2.png" alt="AI Development Image">
+  </div>
+</section>
+
+<!-- AI WORKFLOW -->
+<section class="split-section reverse">
+  <div class="split-text">
+    <h2>How We Implement AI</h2>
+    <p>From data preparation to deployment, our AI workflow ensures your solution is ready for real-world impact.</p>
+    <div class="aso-steps">
+      <div class="step"><span>1</span> Data Collection & Cleaning</div>
+      <div class="step"><span>2</span> Model Training</div>
+      <div class="step"><span>3</span> Testing & Evaluation</div>
+      <div class="step"><span>4</span> Deployment & Monitoring</div>
+    </div>
+  </div>
+  <div class="split-image">
+    <img src="Images/ai3.jpg" alt="AI Workflow Image">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2 style="color: white;">Ready to Supercharge with AI?</h2>
+  <p style="font-size: 1.5rem; margin-top: 3%;">Let iTech Search design your AI future with intelligent, innovative solutions.</p>
+  <a href="contact.html" class="btn-glow">Contact Us</a>
+</section>
+
+<!-- Footer (external CSS) -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+       <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 P-23 Chenab Market, Susan Road, Madina Town, Faisalabad</p>
+      <p>📞 041-715100</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Security | iTech Search</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #222;
+    }
+    h1, h2 { color: #0d3b66; font-weight: 700; }
+    h3 { color: #145ea8; }
+
+    .btn-primary, .btn-glow {
+      display: inline-block;
+      background: linear-gradient(90deg, #0d3b66, #2563eb);
+      color: white;
+      padding: 14px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 5%;
+    }
+    .btn-glow {
+      background: linear-gradient(90deg, #16cbf9, #2243ff);
+      box-shadow: 0 4px 20px rgba(35, 49, 248, 0.5);
+    }
+    .btn-primary:hover, .btn-glow:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at 20% 20%, #0d3b66, #145ea8);
+      color: white;
+      padding: 120px 10%;
+      position: relative;
+    }
+    .hero-content { max-width: 500px; }
+    .hero-mockup img {
+      width: 550px;
+      height: 50vh;
+      border-radius: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-12px)} }
+
+    .features { text-align: center; padding: 80px 10%; }
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card i { font-size: 2rem; color: #0d3b66; margin-bottom: 10px; }
+
+    .split-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 40px;
+    }
+    .split-text {
+      flex: 1;
+    }
+    .split-image {
+      flex: 1;
+    }
+    .split-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .reverse { flex-direction: row-reverse; }
+    ul li { margin: 8px 0; }
+
+    .aso-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .btn-primary {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+    .step {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .step span {
+      background: #0d3b66;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #0d3b66, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .split-section { flex-direction: column; text-align: center; }
+      .hero-mockup img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar (external CSS) -->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+         <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+    <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 style="color: white;font-size: 3rem;margin-bottom: 5%;">Cyber Security</h1>
+    <h1 style="color: white;">Secure Today. Protect Tomorrow.</h1>
+    <p style="font-size: 1.5rem;">We safeguard your business with powerful cyber security solutions that prevent, detect, and respond to threats effectively.</p>
+    <a href="contact.html" class="btn-primary">Get Free Security Assessment</a>
+  </div>
+  <div class="hero-mockup">
+    <img src="Images/s31.jpg" alt="Cyber Security Mockup">
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="features">
+  <h2>Why Choose iTech Search for Cyber Security?</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Threat Protection</h3>
+      <p>Advanced threat detection tools that prevent breaches before they occur.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-shield"></i>
+      <h3>Compliance Ready</h3>
+      <p>We help you meet industry security standards and avoid costly fines.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-lock"></i>
+      <h3>End-to-End Security</h3>
+      <p>Complete coverage from infrastructure to endpoints and everything in between.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-search"></i>
+      <h3>Security Audits</h3>
+      <p>Regular audits to identify and patch vulnerabilities before attackers do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CYBER SERVICES -->
+<section class="split-section">
+  <div class="split-text">
+    <h2>Comprehensive Cyber Security Services</h2>
+    <p>Our tailored cyber security services protect your organization’s assets, networks, and data against ever-evolving cyber threats.</p>
+    <ul>
+      <li><i class="fas fa-check"></i> Network Security</li>
+      <li><i class="fas fa-check"></i> Endpoint Protection</li>
+      <li><i class="fas fa-check"></i> Firewall & VPN Setup</li>
+      <li><i class="fas fa-check"></i> Data Encryption & Backup</li>
+    </ul>
+  </div>
+  <div class="split-image">
+    <img src="Images/s32.jpg" alt="Cyber Services Image">
+  </div>
+</section>
+
+<!-- SECURITY WORKFLOW -->
+<section class="split-section reverse">
+  <div class="split-text">
+    <h2>How We Secure Your Business</h2>
+    <p>We follow a proactive and layered approach to identify, protect, detect, respond, and recover from threats.</p>
+    <div class="aso-steps">
+      <div class="step"><span>1</span> Risk Assessment</div>
+      <div class="step"><span>2</span> Security Planning</div>
+      <div class="step"><span>3</span> Defense Implementation</div>
+      <div class="step"><span>4</span> Incident Response</div>
+    </div>
+  </div>
+  <div class="split-image">
+    <img src="Images/s33.jpg" alt="Cyber Security Process">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2 style="color: white;">Protect Your Digital Assets Today</h2>
+  <p style="font-size: 1.5rem; margin-top: 3%;">Partner with iTech Search for robust and reliable cyber defense solutions.</p>
+  <a href="contact.html" class="btn-glow">Contact Us</a>
+</section>
+
+<!-- Footer (external CSS) -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Cyber Security</li>
+        <li>Digital Marketing</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+       <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 P-23 Chenab Market, Susan Road, Madina Town, Faisalabad</p>
+      <p>📞 041-715100</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

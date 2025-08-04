@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-commerce | iTech Search</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9fafc; color: #222; }
+    h1, h2 { color: #0d3b66; font-weight: 700; }
+    h3 { color: #145ea8; }
+
+    .btn-primary, .btn-glow {
+      display: inline-block;
+      background: linear-gradient(90deg, #0d3b66, #2563eb);
+      color: white;
+      padding: 14px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 5%;
+    }
+    .btn-glow {
+      background: linear-gradient(90deg, #16cbf9, #2243ff);
+      box-shadow: 0 4px 20px rgba(35, 49, 248, 0.5);
+    }
+    .btn-primary:hover, .btn-glow:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    }
+
+    .ec-hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at 20% 20%, #0d3b66, #145ea8);
+      color: white;
+      padding: 120px 10%;
+      position: relative;
+    }
+    .ec-hero-content { max-width: 500px; }
+    .ec-hero-mockup img {
+      width: 550px;
+      height: 50vh;
+      border-radius: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-12px)} }
+
+    .ec-features { text-align: center; padding: 80px 10%; }
+    .ec-feature-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card i { font-size: 2rem; color: #0d3b66; margin-bottom: 10px; }
+
+    .ec-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 40px;
+    }
+    .ec-text { flex: 1; }
+    .ec-image { flex: 1; }
+    .ec-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .reverse { flex-direction: row-reverse; }
+
+    .ec-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .btn-primary {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+    .ec-step {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .ec-step span {
+      background: #0d3b66;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .ec-cta {
+      background: linear-gradient(135deg, #0d3b66, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .ec-hero, .ec-section { flex-direction: column; text-align: center; }
+      .ec-hero-mockup img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+           <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+    <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="ec-hero">
+  <div class="ec-hero-content">
+    <h1 style="color: white;font-size: 3rem;margin-bottom: 5%;">E-Commerce</h1>
+    <h1 style="color: white;">Build, Grow, and Scale Your Online Store</h1>
+    <p style="font-size: 1.5rem;">We develop feature-rich e-commerce platforms designed for growth, engagement, and seamless shopping experiences.</p>
+    <a href="contact.html" class="btn-primary">Start Your Online Store</a>
+  </div>
+  <div class="ec-hero-mockup">
+    <img src="Images/ec1.jpg" alt="E-commerce Hero">
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="ec-features">
+  <h2>Why Choose iTech Search for E-commerce?</h2>
+  <div class="ec-feature-cards">
+    <div class="card">
+      <i class="fas fa-store"></i>
+      <h3>Custom Online Stores</h3>
+      <p>Tailor-made platforms built with your brand and products in mind.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-shopping-cart"></i>
+      <h3>Seamless Checkout</h3>
+      <p>Fast, secure, and user-friendly checkout experiences for your customers.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile Optimization</h3>
+      <p>Responsive design ensures your store looks perfect on all devices.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-cogs"></i>
+      <h3>Integrated Tools</h3>
+      <p>From inventory to payment gateways, we integrate everything you need.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="ec-section">
+  <div class="ec-text">
+    <h2>Our E-commerce Development Services</h2>
+    <p>Whether you're starting from scratch or scaling up, we offer complete e-commerce development services tailored to your business model.</p>
+    <ul>
+      <li><i class="fas fa-check"></i> Shopify & WooCommerce Development</li>
+      <li><i class="fas fa-check"></i> Custom Storefront Design</li>
+      <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+      <li><i class="fas fa-check"></i> Inventory & Order Management</li>
+    </ul>
+  </div>
+  <div class="ec-image">
+    <img src="Images/ec2.jpeg" alt="E-commerce Services">
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="ec-section reverse">
+  <div class="ec-text">
+    <h2>How We Build E-commerce Stores</h2>
+    <p>We follow a result-driven process to build scalable and high-converting e-commerce platforms.</p>
+    <div class="ec-steps">
+      <div class="ec-step"><span>1</span> Requirement Analysis</div>
+      <div class="ec-step"><span>2</span> Design & Development</div>
+      <div class="ec-step"><span>3</span> Testing & Optimization</div>
+      <div class="ec-step"><span>4</span> Launch & Maintenance</div>
+    </div>
+  </div>
+  <div class="ec-image">
+    <img src="Images/ec3.jpg" alt="E-commerce Process">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ec-cta" id="contact">
+  <h2 style="color: white;">Ready to Launch Your Online Store?</h2>
+  <p style="font-size: 1.5rem; margin-top: 3%;">Partner with iTech Search to build a stunning, secure, and scalable e-commerce website.</p>
+  <a href="contact.html" class="btn-glow">Contact Us</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & ASO</li>
+        <li>Artificial Intelligence</li>
+        <li>Cyber Security</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 P-23 Chenab Market, Susan Road, Madina Town, Faisalabad</p>
+      <p>📞 041-715100</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

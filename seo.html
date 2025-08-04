@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEO Services | iTech Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9fafc; color: #222; }
+    h1, h2 { color: #0d3b66; font-weight: 700; }
+    h3 { color: #145ea8; }
+    ul { list-style: none; padding: 0; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(90deg, #0d3b66, #2563eb);
+      color: white;
+      padding: 14px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 5%;
+    }
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    }
+
+    /* Hero */
+    .seo-hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #0d3b66, #2563eb);
+      color: white;
+      padding: 120px 10%;
+      gap: 30px;
+    }
+    .seo-hero-content { max-width: 500px; }
+    .seo-hero-content h1 { font-size: 3rem; margin-bottom: 20px;color: white; }
+    .seo-hero-image img {
+      width: 550px;
+      height: 50VH;
+      border-radius: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-12px)} }
+
+    /* Features */
+    .seo-features { text-align: center; padding: 80px 10%; }
+    .seo-feature-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card i { font-size: 2rem; color: #0d3b66; margin-bottom: 10px; }
+
+    /* Services */
+    .seo-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 40px;
+    }
+    .seo-text { flex: 1; }
+    .seo-image { flex: 1; }
+    .seo-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .reverse { flex-direction: row-reverse; }
+    .seo-text ul li { margin: 8px 0; }
+
+    /* Process Steps */
+    .seo-process { text-align: center; padding: 80px 10%; }
+    .seo-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .step {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .step span {
+      background: #0d3b66;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    /* CTA */
+    .seo-cta {
+      background: linear-gradient(135deg, #0d3b66, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .seo-hero, .seo-section { flex-direction: column; text-align: center; }
+      .seo-hero-image img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+     <!--nav bar-->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+           <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+     <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="seo-hero">
+  <div class="seo-hero-content">
+    <h1 style="color: white;margin-bottom: 5%;font-size: 3rem;">SEO</h1>
+    <h1>Boost Your Visibility with Expert SEO</h1>
+    <p style="font-size: 1.3rem;">Rank higher, get more traffic, and convert visitors into customers with our tailored SEO solutions.</p>
+    <a href="contact.html" class="btn-primary">Get Free SEO Audit</a>
+  </div>
+  <div class="seo-hero-image">
+    <img src="Images/SEO.jpg" alt="SEO Services">
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="seo-features">
+  <h2>Why Choose iTech Search for SEO?</h2>
+  <div class="seo-feature-cards">
+    <div class="card">
+      <i class="fas fa-search"></i>
+      <h3>Keyword Mastery</h3>
+      <p>We target high-intent keywords to bring qualified traffic to your site.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Proven Results</h3>
+      <p>Our strategies consistently improve rankings and conversions.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-cogs"></i>
+      <h3>Technical SEO</h3>
+      <p>From site speed to indexing, we ensure your website is search-engine friendly.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-link"></i>
+      <h3>Quality Backlinks</h3>
+      <p>Gain authority with ethical link-building practices.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="seo-section">
+  <div class="seo-text">
+    <h2>Our SEO Services</h2>
+    <p>We deliver comprehensive SEO solutions tailored to your business goals:</p>
+    <ul>
+      <li><i class="fas fa-check"></i> On-Page Optimization</li>
+      <li><i class="fas fa-check"></i> Technical SEO Audits</li>
+      <li><i class="fas fa-check"></i> Local SEO for Businesses</li>
+      <li><i class="fas fa-check"></i> Content Strategy & Marketing</li>
+      <li><i class="fas fa-check"></i> Link Building Campaigns</li>
+    </ul>
+  </div>
+  <div class="seo-image">
+    <img src="Images/SEO_ranking.avif" alt="SEO Service Details">
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="seo-process">
+  <h2>Our SEO Process</h2>
+  <div class="seo-steps">
+    <div class="step"><span>1</span> Site Audit</div>
+    <div class="step"><span>2</span> Keyword Research</div>
+    <div class="step"><span>3</span> On-Page SEO</div>
+    <div class="step"><span>4</span> Content Creation</div>
+    <div class="step"><span>5</span> Link Building</div>
+    <div class="step"><span>6</span> Analytics & Reporting</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="seo-cta">
+  <h2 style="color: white;">Start Ranking Higher Today</h2>
+  <p style="font-size: 1.4rem; margin-top: 3%;">Let’s craft a winning SEO strategy for your business growth.</p>
+  <a href="contact.html" class="btn-primary">Request SEO Consultation</a>
+</section>
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Services Section -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 Khyaban Colony,Ali Road near Ali Masjid, Madina Town, Faisalabad</p>
+      <p>📞 041-2432639</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

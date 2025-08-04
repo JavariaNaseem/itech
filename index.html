@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hero Slider</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--nav bar-->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+           <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="computer.html">Computer Skills</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+      </div>
+    </div>
+     <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Welcome to <span>iTech Search</span></h1>
+    <h2 class="typing-text"></h2>
+    <p>We craft innovative digital solutions that help businesses thrive in the modern tech-driven world.</p>
+    <a href="#services" class="btn-primary">Explore Services</a>
+  </div>
+
+  <div class="hero-right">
+    <div class="cube">
+      <div class="face face1"><img src="Images/it.jpg" alt="IT Solutions"></div>
+      <div class="face face2"><img src="Images/tech.jpg" alt="Tech Services"></div>
+      <div class="face face3"><img src="Images/Information-Technology.jpg" alt="Information Technology"></div>
+    </div>
+    <div class="platform"></div>
+  </div>
+</section>
+  <!--about section-->
+  <section class="itech-about-section">
+    <div class="itech-about-container">
+      <!-- Text Content -->
+      <div class="itech-about-text">
+        <h2>About iTech Search</h2>
+        <p>
+          iTech Search is your innovation partner in technology solutions. 
+          We empower businesses with AI-driven tools, custom software development, 
+          and scalable digital strategies tailored to modern challenges.
+        </p>
+        <p>
+          Our mission is to transform ideas into impactful solutions, 
+          blending creativity and technology for a smarter future.
+        </p>
+        <a href="about.html" class="itech-learn-more-btn">Learn More</a>
+      </div>
+      <!-- Image Content -->
+      <div class="itech-about-image">
+        <img src="Images/key.jpg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+<section class="our-services-section" id="services">
+  <div class="services-header">
+    <h1>Our Services</h1>
+    <div class="underline"></div>
+    <p class="subtitle">We deliver high-quality solutions to elevate your business</p>
+  </div>
+
+  <div class="services-container">
+    <div class="service-card">
+      <div class="card-image">
+        <img src="Images/web-development.jpg" alt="Web Development">
+      </div>
+      <h2>Web Development</h2>
+      <p>Custom full-stack web development tailored to your business goals.</p>
+      <a href="service-l.html" class="read-more">Read More <span>→</span></a>
+    </div>
+
+    <div class="service-card">
+      <div class="card-image">
+        <img src="Images/SEO.jpg" alt="SEO">
+      </div>
+      <h2>SEO</h2>
+      <p>Boost organic website traffic, rank higher on Google.</p>
+      <a href="seo.html" class="read-more">Read More <span>→</span></a>
+    </div>
+
+    <div class="service-card">
+      <div class="card-image">
+        <img src="Images/GRAPHIC DESIN.jpg" alt="Graphics Designing">
+      </div>
+      <h2>Graphics Designing</h2>
+      <p>Creative graphic design solutions that elevate your brand.</p>
+      <a href="service6.html" class="read-more">Read More <span>→</span></a>
+    </div>
+
+    <div class="service-card">
+      <div class="card-image">
+        <img src="Images/ai.jpg" alt="Artificial Intelligence">
+      </div>
+      <h2>Artificial Intelligence</h2>
+      <p>Automate processes, gain insights, and make smarter decisions.</p>
+      <a href="service2.html" class="read-more">Read More <span>→</span></a>
+    </div>
+
+    <div class="service-card">
+      <div class="card-image">
+        <img src="Images/aso.webp" alt="App Store Optimization">
+      </div>
+      <h2>App Store Optimization</h2>
+      <p>Increase your app’s visibility, downloads, and performance.</p>
+      <a href="service1.html" class="read-more">Read More <span>→</span></a>
+    </div>
+
+    <div class="service-card">
+      <div class="card-image">
+        <img src="Images/app0.avif" alt="App Store Development">
+      </div>
+      <h2>App Store Development</h2>
+      <p>We help your app succeed in today’s competitive market.</p>
+      <a href="service1.html" class="read-more">Read More <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+  
+  <!--why itech-->
+  <section class="itech-why-section">
+ <h2 class="itech-why-title">
+  <span id="typing-text"></span>
+</h2>
+  <!-- First Row -->
+  <div class="itech-why-row">
+    <div class="itech-why-card">
+      <div class="itech-why-icon">💡</div>
+      <h3>Innovative & Scalable Solutions</h3>
+      <p>We deliver cutting-edge IT services designed to grow with your business. From startups to enterprises, our solutions are tailored to meet your evolving needs.</p>
+    </div>
+
+    <div class="itech-why-card">
+      <div class="itech-why-icon">👨‍💻</div>
+      <h3>Expert Team of Professionals</h3>
+      <p>Our team comprises certified experts in web development, cybersecurity, AI, and more, ensuring top-notch service delivery across all IT domains.</p>
+    </div>
+
+    <div class="itech-why-card">
+      <div class="itech-why-icon">📊</div>
+      <h3>Results-Driven Approach</h3>
+      <p>We focus on delivering measurable results. Data-driven strategies are used to enhance performance and drive your business growth.</p>
+    </div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="itech-why-row">
+    <div class="itech-why-card">
+      <div class="itech-why-icon">🌍</div>
+      <h3>Global Reach with Local Insight</h3>
+      <p>Serving clients worldwide, we combine global best practices with local market understanding to deliver effective IT solutions.</p>
+    </div>
+
+    <div class="itech-why-card">
+      <div class="itech-why-icon">🔒</div>
+      <h3>Commitment to Security</h3>
+      <p>Security is at the forefront of our services. We implement robust measures to protect your data and ensure compliance with industry standards.</p>
+    </div>
+
+    <div class="itech-why-card">
+      <div class="itech-why-icon">🤝</div>
+      <h3>Reliable Support</h3>
+      <p>We provide dependable support to ensure smooth operations. Our team is always ready to assist you whenever needed.</p>
+    </div>
+  </div>
+</section>
+
+<!--buisness form-->
+ <section class="form-section">
+  <div class="simple-form-wrapper">
+    <h2>Perfect Solutions For Your Business</h2>
+    <form action="submit_form.php" method="POST">
+      <div class="simple-form-row">
+        <div class="simple-form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="simple-form-group">
+          <label>Your Email</label>
+          <input type="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="simple-form-row">
+        <div class="simple-form-group">
+          <label>Company Name</label>
+          <input type="text" name="company_name" required>
+        </div>
+        <div class="simple-form-group">
+          <label>Your Services</label>
+          <input type="text" name="services" required>
+        </div>
+      </div>
+
+      <div class="simple-form-group">
+        <label>Tell Us About Your Project</label>
+        <textarea name="project_details" required></textarea>
+      </div>
+
+      <button type="submit" class="simple-submit-btn">Submit</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Services Section -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 Khyaban Colony,Ali Road near Ali Masjid, Madina Town, Faisalabad</p>
+      <p>📞 041-2432639</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

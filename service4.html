@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Marketing | iTech Search</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* --- Same Internal CSS from Cyber Security Page --- */
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9fafc; color: #222; }
+    h1, h2 { color: #0d3b66; font-weight: 700; }
+    h3 { color: #145ea8; }
+
+    .btn-primary, .btn-glow {
+      display: inline-block;
+      background: linear-gradient(90deg, #0d3b66, #2563eb);
+      color: white;
+      padding: 14px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 5%;
+    }
+    .btn-glow {
+      background: linear-gradient(90deg, #16cbf9, #2243ff);
+      box-shadow: 0 4px 20px rgba(35, 49, 248, 0.5);
+    }
+    .btn-primary:hover, .btn-glow:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at 20% 20%, #0d3b66, #145ea8);
+      color: white;
+      padding: 120px 10%;
+      position: relative;
+    }
+    .hero-content { max-width: 500px; }
+    .hero-mockup img {
+      width: 550px;
+      height: 50vh;
+      border-radius: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-12px)} }
+
+    .features { text-align: center; padding: 80px 10%; }
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card i { font-size: 2rem; color: #0d3b66; margin-bottom: 10px; }
+
+    .split-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 40px;
+    }
+    .split-text { flex: 1; }
+    .split-image { flex: 1; }
+    .split-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .reverse { flex-direction: row-reverse; }
+    ul li { margin: 8px 0; }
+
+    .aso-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .step {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .btn-primary {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+    .step span {
+      background: #0d3b66;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #0d3b66, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .split-section { flex-direction: column; text-align: center; }
+      .hero-mockup img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar (external CSS) -->
+<nav>
+  <img src="Images/logo.png" class="logo">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-center" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <a href="#" class="no-hover-line">Services ▾</a>
+           <div class="dropdown-content">
+        <a href="service1.html">App Development & ASO</a>
+        <a href="service2.html">Artificial Intelligence</a>
+        <a href="service3.html">Cyber Security</a>
+        <a href="service4.html">Digital Marketing</a>
+        <a href="service5.html">E-commerce</a>
+        <a href="service6.html">Master Design & Animation</a>
+        <a href="service7.html">Networking</a>
+        <a href="service8.html">Professional Development</a>
+        <a href="service9.html">Rapid Prototyping & MVP Development</a>
+        <a href="service10.html">Software Deployment</a>
+        <a href="service11.html">Software Development</a>
+        <a href="service-l.html">Web Development</a>
+        <a href="computer.html">Computer Skills</a>
+      </div>
+    </div>
+    <a href="contact.html" class="contact-btn">Contact Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 style="color: white;font-size: 3rem;margin-top: 5%;">Digital Marketing</h1>
+    <h1 style="color: white;">Elevate Your Brand Visibility</h1>
+    <p style="font-size: 1.5rem;">Our digital marketing strategies drive traffic, increase engagement, and grow your business online.</p>
+    <a href="contact.html" class="btn-primary">Get Free Marketing Consultation</a>
+  </div>
+  <div class="hero-mockup">
+    <img src="Images/s41.jpg" alt="Digital Marketing Banner">
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="features">
+  <h2>Why Choose iTech Search for Digital Marketing?</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <i class="fas fa-bullhorn"></i>
+      <h3>Targeted Campaigns</h3>
+      <p>Reach the right audience with data-driven campaigns that convert.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>SEO Optimization</h3>
+      <p>Boost your website's visibility with proven SEO strategies.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-share-alt"></i>
+      <h3>Social Media Management</h3>
+      <p>Engage users across platforms with creative, consistent content.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-envelope-open-text"></i>
+      <h3>Email Marketing</h3>
+      <p>Personalized emails that keep your customers coming back.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETING SERVICES -->
+<section class="split-section">
+  <div class="split-text">
+    <h2>Digital Marketing Services We Offer</h2>
+    <p>We offer a full suite of digital marketing services tailored to your brand's goals and target market.</p>
+    <ul>
+      <li><i class="fas fa-check"></i> SEO & SEM</li>
+      <li><i class="fas fa-check"></i> Content Marketing</li>
+      <li><i class="fas fa-check"></i> Social Media Campaigns</li>
+      <li><i class="fas fa-check"></i> Paid Ads (Google, Meta, etc.)</li>
+    </ul>
+  </div>
+  <div class="split-image">
+    <img src="Images/s42.png" alt="Digital Marketing Services">
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="split-section reverse">
+  <div class="split-text">
+    <h2>Our Digital Marketing Process</h2>
+    <p>We follow a proven framework to create high-impact digital campaigns from strategy to execution.</p>
+    <div class="aso-steps">
+      <div class="step"><span>1</span> Market Research</div>
+      <div class="step"><span>2</span> Strategy Development</div>
+      <div class="step"><span>3</span> Campaign Execution</div>
+      <div class="step"><span>4</span> Performance Analysis</div>
+    </div>
+  </div>
+  <div class="split-image">
+    <img src="Images/s43.jpg" alt="Marketing Process">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2 style="color: white;">Grow Your Business with iTech Search</h2>
+  <p style="font-size: 1.5rem; margin-top: 3%;">Let our experts craft a digital strategy that drives measurable results.</p>
+  <a href="contact.html" class="btn-glow">Contact Us</a>
+</section>
+
+<!-- Footer (external CSS) -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li>App Development & App Store Optimization</li>
+        <li>Artificial Intelligence</li>
+        <li>Cyber Security</li>
+        <li>Digital Marketing</li>
+        <li>Software Development</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+       <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="footer-btn">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-info">
+      <h3>Contact</h3>
+      <p>📍 P-23 Chenab Market, Susan Road, Madina Town, Faisalabad</p>
+      <p>📞 041-715100</p>
+      <p>✉️ <a href="mailto:info@itechsearch.com">info@itechsearch.com</a></p>
+      <p>🕒 Monday - Saturday | 9 am - 5 pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 iTech Search. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
